@@ -10,14 +10,16 @@ import ItemCount from './components/itemListContainer/itemConunt';
 function App() {
   const [numero, setNumero] = useState(0);
   const [carrito, setCarrito] = useState(0)
+  const [stock, setstock] = useState(4)
   const sumar = () => {
-      if(numero < 4 ){setNumero (numero + 1);}
+      if(numero < stock ){setNumero (numero + 1);}
   }
   const restar = () => {
     if(numero > 0 ){setNumero (numero - 1);}   
   }
   const onAdd = () => {
-    setCarrito(numero)  
+    if(carrito < 4 ){setCarrito(carrito+numero)}
+    if(stock > 0 )setstock(stock-numero)  
   }
   
   return (
@@ -33,7 +35,10 @@ function App() {
       </header>
       <main className="col-sm-4 card">
         <div className="card-text">
-        <ItemListContainer greeting="Stock = 4"/>
+        <div className="stock">
+        <ItemListContainer greeting="Stock ="/>
+        <h1>{stock}</h1>
+        </div>
         <div className="container-card">
           <ItemCount numero={numero}/>
           <div className="botonera btn btn-dark" >
