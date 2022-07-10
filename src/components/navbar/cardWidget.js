@@ -1,8 +1,8 @@
 import { FaShoppingCart } from 'react-icons/fa';
-const Carrito = () => {
+const Carrito = ({carrito}) => {
     return (
         <button type="button" class="btn btn-secondary">
-            <FaShoppingCart /> <span class="badge badge-light">4</span>
+            <FaShoppingCart /> <span class="badge badge-light">{carrito}</span>
         </button>
     )
 }
