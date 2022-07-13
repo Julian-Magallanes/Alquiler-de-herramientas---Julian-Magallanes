@@ -35,10 +35,10 @@ function App() {
       </header>
       <main className="col-sm-4 card">
         <div className="card-text">
-        <div className="stock">
-        <ItemListContainer greeting="Stock ="/>
-        <h1>{stock}</h1>
-        </div>
+          <div className="stock">
+            <ItemListContainer greeting="Stock ="/>
+            <h1>{stock}</h1>
+          </div>
         <div className="container-card">
           <ItemCount numero={numero}/>
           <div className="botonera btn btn-dark" >
