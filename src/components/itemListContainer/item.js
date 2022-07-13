@@ -2,13 +2,13 @@ import React from 'react';
 
 const Item = ({ item }) => {
     return(
-        <div>
-            <h2>{item.name}</h2>
+        <div className="col-sm-3 card">
+            <h2 className="card-text">{item.name}</h2>
             <img src={item.img} className="imgProducts"/>
-            <p>{item.description}</p>
+            <p className="card-text">{item.description}</p>
             <div>
-                <h4>Precio: ${item.price}</h4>
-                <h5>Stock: {item.stock}</h5>
+                <h4 className="card-text">Precio: ${item.price}</h4>
+                <h5 className="card-text">Stock: {item.stock}</h5>
             </div>
         </div>
     );

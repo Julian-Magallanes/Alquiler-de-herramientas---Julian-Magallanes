@@ -5,7 +5,7 @@ import Buscador from './components/navbar/searcher';
 import Menu from './components/navbar/navbar';
 import Carrito from './components/navbar/cardWidget';
 import ItemListContainer from './components/itemListContainer/itemListContainer';
-import ItemCount from './components/itemListContainer/itemConunt';
+import ItemCount from './components/itemListContainer/itemCount';
 
 function App() {
   const [numero, setNumero] = useState(0);
@@ -33,14 +33,10 @@ function App() {
           <Carrito carrito={carrito}/>
         </div>
       </header>
-      <main className="col-sm-4 card">
-        <div className="card-text">
-          <div className="stock">
-            <ItemListContainer greeting="Stock ="/>
-            <h1>{stock}</h1>
-          </div>
+      <main>
+      <div className="col-4 card container">
         <div className="container-card">
-          <ItemCount numero={numero}/>
+          <ItemCount numero={numero} stock={stock}/>
           <div className="botonera btn btn-dark" >
             <button className="btn btn-secondary" onClick={restar}>-</button>
             <button className="btn btn-secondary" onClick={sumar}>+</button>
@@ -48,6 +44,7 @@ function App() {
           <button className="botonera btn btn-dark" onClick={onAdd}>Agregar al carrito</button>
         </div>
         </div>
+        <ItemListContainer/>
       </main>
     </div>
   );

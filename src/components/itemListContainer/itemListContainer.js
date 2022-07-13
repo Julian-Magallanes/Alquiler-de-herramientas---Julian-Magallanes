@@ -2,13 +2,7 @@ import React from 'react';
 import { useEffect, useState } from "react";
 import ItemList from './itemList';
 import { products } from "./products";
-
-const styles = {
-    h1Styles: {
-        font: '40px',
-    },
-}
-const ItemListContainer = ({greeting}) => {
+const ItemListContainer = ({stock}) => {
     const [items, setItems] = useState([])
     useEffect(() => {
         const getProducts = new Promise ((resolve, reject) => {
@@ -26,8 +20,10 @@ const ItemListContainer = ({greeting}) => {
     }, [])
     return (
         <div>
-            <h1 styles={styles.h1Styles}>{greeting}</h1>
-            <ItemList items={items}/>
+            <div className='row '>
+                <ItemList items={items}/>
+            </div>
+
         </div>
     )
 }

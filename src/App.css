@@ -47,19 +47,24 @@ main {
 .card {
   display: flex;
   justify-content: center;
+  align-items: center;
   margin: 20px;
+  padding: 8px;
 }
+
 .card-text {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  text-align: center;
 }
 .container-card {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  text-align: center;
 }
 .botonera{
   display: flex;
@@ -77,4 +82,8 @@ main {
   justify-content: center;
   align-items: center;
   width: 200px;
+}
+.row {
+  display: flex;
+  justify-content: center;
 }
