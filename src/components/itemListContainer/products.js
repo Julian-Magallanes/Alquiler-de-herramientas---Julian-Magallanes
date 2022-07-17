@@ -5,7 +5,7 @@ const products = [
         name: 'Compactadora de hormigon',
         price: 5000,
         stock: 2,
-        img: 'assets/compactadora.png',
+        img: '/assets/compactadora.png',
         category: 'hormigon',
         description:
             'Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt iusto magni quaerat nisi quisquam? Error, earum aspernatur tenetur sint cum in quibusdam eos quae velit ratione maxime! Error, earum repellendus.',
