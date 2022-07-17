@@ -1,11 +1,11 @@
 import React from 'react';
 import { useEffect, useState } from "react";
 import ItemList from './itemList';
-import { products } from "./products";
-const ItemListContainer = ({stock}) => {
+import  products  from "./products";
+const ItemListContainer = () => {
     const [items, setItems] = useState([])
     useEffect(() => {
-        const getProducts = new Promise ((resolve, reject) => {
+        const getProducts = new Promise ((resolve) => {
             setTimeout(() => {
                 resolve(products)
             }, 2000);
@@ -23,7 +23,6 @@ const ItemListContainer = ({stock}) => {
             <div className='row '>
                 <ItemList items={items}/>
             </div>
-
         </div>
     )
 }

@@ -1,5 +1,5 @@
 import React from 'react';
-export const products = [
+const products = [
     {
         id: 1,
         name: 'Compactadora de hormigon',
@@ -62,3 +62,4 @@ export const products = [
             'Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt iusto magni quaerat nisi quisquam? Error, earum aspernatur tenetur sint cum in quibusdam eos quae velit ratione maxime! Error, earum repellendus.',
     },
 ];
+export default products

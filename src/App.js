@@ -1,14 +1,13 @@
-import { useState } from 'react';
-import logo from './neutro-06.png';
 import './App.css';
-import Buscador from './components/navbar/searcher';
-import Menu from './components/navbar/navbar';
-import Carrito from './components/navbar/cardWidget';
 import ItemListContainer from './components/itemListContainer/itemListContainer';
-import ItemCount from './components/itemListContainer/itemCount';
+import {BrowserRouter, Routes, Route} from "react-router-dom";
+import Navbar from './components/navbar/navbar';
+import ItemDetailContainer from './components/itemDetailContainer/itemDetailContainer';
+import Home from './components/page/home';
+import Contactanos from './components/page/contactanos';
 
 function App() {
-  const [numero, setNumero] = useState(0);
+  /* const [numero, setNumero] = useState(0);
   const [carrito, setCarrito] = useState(0)
   const [stock, setstock] = useState(4)
   const sumar = () => {
@@ -21,15 +20,12 @@ function App() {
     if(carrito < 4 ){setCarrito(carrito+numero)}
     if(stock > 0 )setstock(stock-numero)  
   }
-  
-  return (
-    
-    <div className="App">
+      <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <Menu className="App-menu"/>
+        <Navbar/>
         <div className="App-header__search">
-          <Buscador/>
+          <Browser/>
           <Carrito carrito={carrito}/>
         </div>
       </header>
@@ -47,6 +43,20 @@ function App() {
         <ItemListContainer/>
       </main>
     </div>
+    */
+  return (
+    <BrowserRouter>
+        <Navbar/>
+    <Routes>
+      <Route path='/' element={<Home/>}/>
+      <Route path='/catalogo' element={<ItemListContainer/>}/>
+      <Route path='/contactanos' element={<Contactanos/>}/>
+      <Route path='/item/:id' element={<ItemDetailContainer/>}/>
+      <Route path='*' element={<h1>404 not found</h1>}/>
+    </Routes>
+    </BrowserRouter>
+    
+
   );
 }
 

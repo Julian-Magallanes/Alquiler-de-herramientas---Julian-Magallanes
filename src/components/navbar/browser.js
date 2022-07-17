@@ -1,5 +1,5 @@
 import { FaSistrix } from 'react-icons/fa';
-const Buscador = () => {
+const Browser = () => {
     return (
         <form className="form-inline">
             <input className="form-control mr-sm-2" type="search" placeholder="Que estas buscando" aria-label="Search"/>
@@ -7,4 +7,4 @@ const Buscador = () => {
         </form>
     )
 }
-export default Buscador;
+export default Browser;
