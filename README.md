@@ -11,12 +11,12 @@ Actualmente el proyecto se encuentra en desarrollo del minimo viable en donde so
 El sitio fue realizado en react.js (https://es.reactjs.org/), los estilos fueron realizados con la libreria de bootstrap (https://getbootstrap.com/) y css.
 
 ### Guia de instalación de proyecto
-
+```
 $ git clone https://github.com/Julian-Magallanes/Alquiler-de-herramientas---Julian-Magallanes.git
 $ cd ../path/to/the/file
 $ npm install
 $ npm start
-
+```
 El home del proyecto se debe ver asi
 <img src="./public/assets/page.png"></img>
 
