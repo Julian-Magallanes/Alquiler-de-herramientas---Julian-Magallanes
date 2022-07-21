@@ -112,3 +112,11 @@ main {
   justify-content: center;
   text-align: center;
 }
+.finish {
+  width: 200px;
+  margin-left: 20px;
+  height: 40px;
+}
+.finish p {
+  font-size: 18px;
+}
