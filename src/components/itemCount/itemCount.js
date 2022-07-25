@@ -6,7 +6,7 @@ const styles = {
         padding: '20px',
     },
 }
-const ItemCount = ({numero, restar, sumar, onAdd}) => {
+const ItemCount = ({numero, restar, sumar}) => {
 
     return (
         <div>

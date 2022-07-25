@@ -1,13 +1,17 @@
 import { FaChevronLeft } from 'react-icons/fa';
 import ItemCount from "../itemCount/itemCount";
 import { Link } from 'react-router-dom';
-import { useState } from 'react';
+import { useContext, useState } from 'react';
+import { CartContext } from '../../context/cartContext';
 
 const ItemDetail = ({ item }) => {
     
     const {name, price, stock, img, description} = item || {};
 
     const [numero, setNumero] = useState(0);
+
+    const {addToCard} = useContext(CartContext);
+    
     const [carrito, setCarrito] = useState(0);
     const [priceTotal, setPriceTotal] = useState(0);
     const sumar = () => {
@@ -18,8 +22,10 @@ const ItemDetail = ({ item }) => {
     }
     const onAdd = () => {
         if(carrito < 4 ){setCarrito(carrito+numero)} 
-        setPriceTotal(price*numero) 
+        setPriceTotal(price*numero); 
+        addToCard(item,numero);
     }
+    
 
     return (
         <>
@@ -36,7 +42,7 @@ const ItemDetail = ({ item }) => {
                 
                 <button className="botonera btn btn-dark" onClick={onAdd}>Agregar al carrito</button>
                 <h4 className="card-text">Precio Total: ${priceTotal}</h4>
-            <Link to={"/cart"} ><button className="botonera btn btn-dark">Finalizar compra</button></Link>
+            <Link to={"/cart"} ><button className="botonera btn btn-dark">Ir al carrito</button></Link>
         </div>
         </>
     )
