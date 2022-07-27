@@ -1,11 +1,4 @@
 
-
-const styles = {
-    h3Styles: {
-        font: '20px',
-        padding: '20px',
-    },
-}
 const ItemCount = ({numero, restar, sumar}) => {
 
     return (

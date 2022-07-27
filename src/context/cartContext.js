@@ -19,8 +19,15 @@ const Provider = (props) =>{
         return cart.some((item) => item.id == id);
 
     };
+    const deleteOne = (id) => {
+        const filtrarProd = cart.filter((product) => product.id !==id);
+        setCart(filtrarProd);
+    };
+    const deleteAll = () => {
+        setCart([]);
+    };
     return (
-        <CartContext.Provider value={{cart,addToCard}}>
+        <CartContext.Provider value={{cart,addToCard,deleteOne,deleteAll}}>
             {props.children}       
         </CartContext.Provider>
     )
