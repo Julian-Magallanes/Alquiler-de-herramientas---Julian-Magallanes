@@ -6,7 +6,7 @@ const CartItem  = ({product}) => {
         <div className="cart ">
         <div>
             <h4>{product.name}</h4>
-            <img src={product.img} className="imgProducts"/>
+            <img src={product.image} className="imgProducts"/>
         </div>
         <div className="itemCart">
             <button className="botonera btn btn-dark" onClick={()=>deleteOne(product.id)}>Eliminar producto</button>

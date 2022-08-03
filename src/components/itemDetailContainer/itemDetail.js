@@ -6,7 +6,7 @@ import { CartContext } from '../../context/cartContext';
 
 const ItemDetail = ({ item }) => {
     
-    const {name, price, stock, img, description} = item || {};
+    const {name, price, stock, image, description} = item || {};
 
     const [numero, setNumero] = useState(0);
 
@@ -32,7 +32,7 @@ const ItemDetail = ({ item }) => {
         <Link to={"/catalogo"} ><button className="btn btn-ligth finish"><p><FaChevronLeft/>Volver al catalogo</p></button></Link>
         <div className="card text-center">
             <h2 className="card-text">{name}</h2>
-            <img src={img} className="imgProducts"/>
+            <img src={image} className="imgProducts"/>
             <p className="card-text">{description}</p>
             <div>
                 <h4 className="card-text">Precio: ${price}</h4>
