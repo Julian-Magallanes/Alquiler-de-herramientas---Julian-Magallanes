@@ -9,7 +9,6 @@ const ItemDetailContainer = () => {
     const [item, setItem] = useState()
     const {id} = useParams()
     const [load, setLoad] = useState(true)
-    console.log(id)
     /*
     const {id} = useParams()
     const getItemId = () => {

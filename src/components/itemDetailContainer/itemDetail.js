@@ -24,7 +24,6 @@ const ItemDetail = ({ item, id}) => {
         if(carrito < stock ){setCarrito(carrito+numero)} 
         setPriceTotal(price*numero); 
         addToCard(item,numero,id);
-        console.log(id)
     }
     
 
