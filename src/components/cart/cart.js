@@ -5,7 +5,6 @@ import { Link } from 'react-router-dom';
 import CartItem from './cartItem';
 const Cart = () => {
     const {cart, deleteAll} = useContext(CartContext);
-
     if (cart.length===0){
         return(
             <div className='card'>

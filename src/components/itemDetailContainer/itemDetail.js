@@ -21,7 +21,7 @@ const ItemDetail = ({ item }) => {
         if(numero > 0 ){setNumero (numero - 1);}   
     }
     const onAdd = () => {
-        if(carrito < 4 ){setCarrito(carrito+numero)} 
+        if(carrito < stock ){setCarrito(carrito+numero)} 
         setPriceTotal(price*numero); 
         addToCard(item,numero);
     }

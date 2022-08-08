@@ -2,14 +2,13 @@ import React from 'react';
 import { useEffect, useState } from "react";
 import { useParams } from 'react-router-dom';
 import ItemDetail from './itemDetail';
-import products from "../itemListContainer/products";
+//import products from "../itemListContainer/products";
 import Spinner from 'react-bootstrap/Spinner';
 import {doc, getDoc, getFirestore } from 'firebase/firestore'
-
 const ItemDetailContainer = () => {
-    const [item, setItem] = useState([])
+    const [item, setItem] = useState()
     const {id} = useParams()
-    //const [load, setLoad] = useState(true)
+    const [load, setLoad] = useState(true)
 
     /*
     const {id} = useParams()
@@ -28,14 +27,7 @@ const ItemDetailContainer = () => {
         }
         )
     },[])
-    {load ? 
-        <div className="home">
-            <div className="home-content">
-                <Spinner animation="border" role="status" >
-                    <span className="visually-hidden"></span>
-                </Spinner>
-            </div> 
-        </div>:
+    
 
 */
     const getProducts = async () => {
@@ -44,15 +36,22 @@ const ItemDetailContainer = () => {
         const itemConfig =  doc (db, 'items', id);
         getDoc(itemConfig).then((snapshot) => {
             setItem(snapshot.data());
-            console.log(snapshot.data())
+            setLoad(false)
         });
     };
     useEffect(()=> {
         getProducts();
     },[])
     return (
-        <> 
-        <ItemDetail item={item}/> 
+        <>{load ? 
+            <div className="home">
+                <div className="home-content">
+                    <Spinner animation="border" role="status" >
+                        <span className="visually-hidden"></span>
+                    </Spinner>
+                </div> 
+            </div>:
+        <ItemDetail item={item}/> }
         </>
     )
 }

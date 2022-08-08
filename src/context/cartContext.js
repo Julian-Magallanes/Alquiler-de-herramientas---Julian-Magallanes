@@ -4,19 +4,18 @@ export const CartContext = createContext()
 
 const Provider = (props) =>{
     const [cart, setCart] = useState([])
-
+    
     useEffect (() => {
         console.log(cart)
     }, [cart]);
     const addToCard = (item, carrito) => {
-        if(inCart(item.id)){
-
+        if(inCart(item)){
         }else {
             setCart([...cart,{...item,carrito}]);
         }
     };
     const inCart = (id) => {
-        return cart.some((item) => item.id == id);
+        return cart.some((item) => item.name === id);
 
     };
     const deleteOne = (id) => {
