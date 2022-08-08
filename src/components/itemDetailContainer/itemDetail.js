@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import { useContext, useState } from 'react';
 import { CartContext } from '../../context/cartContext';
 
-const ItemDetail = ({ item }) => {
+const ItemDetail = ({ item, id}) => {
     
     const {name, price, stock, image, description} = item || {};
 
@@ -23,7 +23,8 @@ const ItemDetail = ({ item }) => {
     const onAdd = () => {
         if(carrito < stock ){setCarrito(carrito+numero)} 
         setPriceTotal(price*numero); 
-        addToCard(item,numero);
+        addToCard(item,numero,id);
+        console.log(id)
     }
     
 
