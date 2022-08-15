@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/Alquiler-de-herramientas---Julian-Magallanes/static/css/main.8da6f95a.css",
+    "main.js": "/Alquiler-de-herramientas---Julian-Magallanes/static/js/main.4984e349.js",
+    "static/js/787.5883ecc6.chunk.js": "/Alquiler-de-herramientas---Julian-Magallanes/static/js/787.5883ecc6.chunk.js",
+    "static/media/fondo2.jpg": "/Alquiler-de-herramientas---Julian-Magallanes/static/media/fondo2.6c3a7b749084f77344b5.jpg",
+    "index.html": "/Alquiler-de-herramientas---Julian-Magallanes/index.html",
+    "main.8da6f95a.css.map": "/Alquiler-de-herramientas---Julian-Magallanes/static/css/main.8da6f95a.css.map",
+    "main.4984e349.js.map": "/Alquiler-de-herramientas---Julian-Magallanes/static/js/main.4984e349.js.map",
+    "787.5883ecc6.chunk.js.map": "/Alquiler-de-herramientas---Julian-Magallanes/static/js/787.5883ecc6.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.8da6f95a.css",
+    "static/js/main.4984e349.js"
+  ]
+}
