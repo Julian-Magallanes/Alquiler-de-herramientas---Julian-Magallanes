@@ -9,7 +9,7 @@ const ItemDetailContainer = () => {
     const [item, setItem] = useState()
     const {id} = useParams()
     const [load, setLoad] = useState(true)
-    /*
+/*
     const {id} = useParams()
     const getItemId = () => {
         return new Promise((resolve)=>{
@@ -26,8 +26,6 @@ const ItemDetailContainer = () => {
         }
         )
     },[])
-    
-
 */
     const getProducts = async () => {
         const db = getFirestore();

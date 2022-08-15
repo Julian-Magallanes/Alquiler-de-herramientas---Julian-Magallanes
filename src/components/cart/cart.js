@@ -3,7 +3,7 @@ import React, {useContext} from 'react';
 import { CartContext } from '../../context/cartContext';
 import { Link } from 'react-router-dom';
 import CartItem from './cartItem';
-import {addDoc, collection, doc, updateDoc, getFirestore } from 'firebase/firestore'
+import {addDoc, collection, getFirestore } from 'firebase/firestore'
 import {useState } from 'react';
 const Cart = () => {
     const {cart, deleteAll} = useContext(CartContext);
@@ -22,6 +22,7 @@ const Cart = () => {
                 (acc, item) => acc + item.price * item.carrito,
                 0
             ),
+            
         };
         await addDoc(orderCollectionQuery, order)
         .then((response) => {

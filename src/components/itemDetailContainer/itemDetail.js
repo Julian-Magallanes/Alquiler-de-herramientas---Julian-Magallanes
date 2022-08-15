@@ -35,13 +35,13 @@ const ItemDetail = ({ item, id}) => {
             <img src={image} className="imgProducts"/>
             <p className="card-text">{description}</p>
             <div>
-                <h4 className="card-text">Precio: ${price}</h4>
+                <h4 className="card-text">Precio x Dia: ${price}</h4>
                 <h5 className="card-text">Stock: {stock}</h5>
             </div>
             <ItemCount numero={numero} sumar={sumar} restar={restar} onAdd={onAdd}/>
                 
                 <button className="botonera btn btn-dark" onClick={onAdd}>Agregar al carrito</button>
-                <h4 className="card-text">Precio Total: ${priceTotal}</h4>
+                <h4 className="card-text">Precio Total x Dia: ${priceTotal}</h4>
             <Link to={"/cart"} ><button className="botonera btn btn-dark">Ir al carrito</button></Link>
         </div>
         </>

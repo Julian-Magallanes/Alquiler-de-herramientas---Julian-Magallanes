@@ -4,11 +4,11 @@ Este proyecto sera una tienda en donde se pueda realizar la solicitud y pago de 
 
 ## Estado del proyecto
 
-Actualmente el proyecto se encuentra en desarrollo del minimo viable en donde solo se ah dispuesto como compra de maquinas. Se agregaran: tiempo de alquiler, filtros en la busqueda de herramientras en donde se separe por categorias y el proceso de compras en el carrito.
+Actualmente el proyecto se encuentra desarrollado el minimo viable en donde solo se ah dispuesto como compra de maquinas. Se agregaron: filtros en la busqueda de herramientras en donde se separe por categorias y el proceso de compras en el carrito.
 
 ### Tecnologias utilizadas
 
-El sitio fue realizado en react.js (https://es.reactjs.org/), los estilos fueron realizados con la libreria de bootstrap (https://getbootstrap.com/) y css.
+El sitio fue realizado en react.js (https://es.reactjs.org/), los estilos fueron realizados con la libreria de bootstrap (https://getbootstrap.com/) y css, ademas se uso de firebase (https://firebase.google.com) para guardar el mock de productos.
 
 ### Guia de instalación de proyecto
 ```

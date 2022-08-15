@@ -2,7 +2,6 @@ import React from 'react';
 import { useEffect, useState } from "react";
 import ItemList from './itemList';
 import Spinner from 'react-bootstrap/Spinner';
-//import products from "../itemListContainer/products";
 import {collection, getDocs, getFirestore, query, where } from 'firebase/firestore'
 const ItemListContainer = () => {
     const [items, setItems] = useState([]);
@@ -44,7 +43,7 @@ const ItemListContainer = () => {
                     </Spinner>
                 </div>
             </div> : 
-            <div className='row '>
+            <div>
                 <ItemList items={items} setFilterValue={setFilterValue}/>
             </div>
         }

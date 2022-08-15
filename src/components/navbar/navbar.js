@@ -17,16 +17,16 @@ const Navbar = () => {
                 <div className="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
                 <ul className="nav__menu navbar-nav">
                     <li className=" nav-item">
-                        <NavLink to={"/catalogo"} className="nav__menuLink nav-link active" aria-current="page" >CATALOGO</NavLink>
+                        <NavLink to={"/catalogo"} style={({isActive}) => isActive ? {color:'white', border:'solid grey 1px ', borderRadius:'10px', background:'grey'} : {}} className="nav__menuLink nav-link active" aria-current="page" >CATALOGO</NavLink>
                     </li>
                     <li className="nav-item">
-                        <NavLink to={"/contactanos"} className="nav__menuLink nav-link active" aria-current="page" >CONTACTANOS</NavLink>
+                        <NavLink to={"/contactanos"} style={({isActive}) => isActive ? {color:'white', border:'solid grey 1px ', borderRadius:'10px', background:'grey'} : {}} className="nav__menuLink nav-link active" aria-current="page" >CONTACTANOS</NavLink>
                     </li>
                     <li className="nav-item">
-                        <NavLink to={"/contactanos"} className="nav__menuLink nav-link active" aria-current="page" >DONDE ESTAMOS</NavLink>
+                        <NavLink to={"/dondeEstamos"} style={({isActive}) => isActive ? {color:'white', border:'solid grey 1px ', borderRadius:'10px', background:'grey'} : {}} className="nav__menuLink nav-link active" aria-current="page" >DONDE ESTAMOS</NavLink>
                     </li>
                     <li className="nav-item">
-                        <NavLink to={"/contactanos"} className="nav__menuLink nav-link active" aria-current="page" >QUIENES SOMOS</NavLink>
+                        <NavLink to={"/quienesSomos"} style={({isActive}) => isActive ? {color:'white', border:'solid grey 1px ', borderRadius:'10px', background:'grey'} : {}} className="nav__menuLink nav-link active" aria-current="page" >QUIENES SOMOS</NavLink>
                     </li>
                 </ul>
                 </div>

@@ -9,13 +9,13 @@ const ItemList = ({ items, setFilterValue}) => {
                     <button className="botonera btn btn-outline-secondary " onClick={(event) => setFilterValue (event)} value="asfalto">Asfalto</button>
                     <button className="botonera btn btn-outline-secondary " onClick={(event) => setFilterValue (event)} value="electricidad">Electricidad</button>
                 </div>
-            
+            </div>
             <div className='row '>
             {items.map((item, id) => 
                 <Item item={item} key={id}/>
             )}
             </div>
-            </div>
+            
         </>
     );
 };
