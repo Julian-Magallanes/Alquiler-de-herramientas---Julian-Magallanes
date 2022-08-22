@@ -3,39 +3,10 @@ import React, {useContext} from 'react';
 import { CartContext } from '../../context/cartContext';
 import { Link } from 'react-router-dom';
 import CartItem from './cartItem';
-import {addDoc, collection, getFirestore } from 'firebase/firestore'
-import {useState } from 'react';
+//import {addDoc, collection, getFirestore } from 'firebase/firestore'
+//import {useState } from 'react';
 const Cart = () => {
     const {cart, deleteAll} = useContext(CartContext);
-    const [orderId, setOrderId] = useState('');
-    const createOrder = async (e) => {
-        e.preventDefault();
-        const db = getFirestore();
-        const orderCollectionQuery = collection(db, 'orders');
-        const order = {
-            buyer: {name: 'Julia',phone: '1122334245',email: 'jui@gmail.com' },
-            items: cart.map((item) => ({
-                title: item.name,
-                price: item.price,
-            })),
-            total: cart.reduce(
-                (acc, item) => acc + item.price * item.carrito,
-                0
-            ),
-            
-        };
-        await addDoc(orderCollectionQuery, order)
-        .then((response) => {
-            console.log(response.id);
-            setOrderId(response.id);
-            return response.id;
-        })
-        .catch((error) => {
-            console.log(error);
-        });
-    };
-
-    
     if (cart.length===0){
         return(
             <div className='card'>
@@ -62,7 +33,7 @@ const Cart = () => {
         </div>
 
             <div className="orders ">
-                <button onClick={createOrder} className="botonera btn btn-dark ">Crear orden</button>
+            <Link to={"/orden"} className="botonera btn btn-dark ">Crear orden</Link>
                 
             </div>
         </>

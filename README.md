@@ -17,8 +17,8 @@ $ cd ../path/to/the/file
 $ npm install
 $ npm start
 ```
-El home del proyecto se debe ver asi
-<img src="./public/assets/page.png"></img>
+El proyecto se ve asi:
+<img src="./public/assets/video pagina.gif"></img>
 
 ### Finalidad del proyecto
 

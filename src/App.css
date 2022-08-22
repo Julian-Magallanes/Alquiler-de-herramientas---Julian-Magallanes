@@ -160,3 +160,14 @@ main {
 .navActivo{
   color: brown;
 }
+.card-large{
+  justify-content: space-between;
+  background-color: white;
+  border-radius: 8px;
+  margin: 20px;
+  padding: 20px;
+}
+.text-button{
+  text-decoration: none;
+  color: white;
+}

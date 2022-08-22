@@ -9,6 +9,8 @@ import Cart from './components/cart/cart';
 import Provider from './context/cartContext';
 import DondeEstamos from './components/page/dondeEstamos';
 import QuienesSomos from './components/page/quienesSomos';
+import Form from './components/form/form';
+
 
 function App() {
   return (
@@ -23,7 +25,7 @@ function App() {
           <Route path='/quienesSomos' element={<QuienesSomos/>}/>
           <Route path='/cart' element={<Cart/>}/>
           <Route path='/item/:id' element={<ItemDetailContainer/>}/>
-          <Route path='*' element={<h1>404 not found</h1>}/>
+          <Route path='/orden' element={<Form/>}/>
         </Routes>
       </BrowserRouter>
     </Provider>
